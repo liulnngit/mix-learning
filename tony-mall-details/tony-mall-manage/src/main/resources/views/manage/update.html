@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品调整</title>
+<link rel="stylesheet" type="text/css"
+	href="http://p66gg5i0y.bkt.clouddn.com/mall/css/index.css">
+</head>
+
+<body>
+	<center>
+		<form action="/manage/update" method="post">
+			<input type="hidden" name="goods_id" th:value="${goodsInfo.goods_id}"/>
+			<textarea placeholder="标题" name="goods_title" cols="50" rows="3"
+				th:inline="text">[[${goodsInfo.goods_title}]]</textarea>
+			<hr />
+			<textarea placeholder="简介" name="goods_desc" cols="50" rows="3"
+				th:inline="text">[[${goodsInfo.goods_desc}]]</textarea>
+			<hr />
+			<textarea placeholder="描述" name="goods_comment" cols="50" rows="3"
+				th:inline="text">[[${goodsInfo.goods_comment}]]</textarea>
+			<hr />
+			<textarea placeholder="价格" name="goods_price" cols="20" rows="1"
+				th:inline="text">[[${goodsInfo.goods_price}]]</textarea>
+			<hr />
+			<input type="submit" value="提交修改" id="searchBtn" />
+		</form>
+	</center>
+</body>
+</html>

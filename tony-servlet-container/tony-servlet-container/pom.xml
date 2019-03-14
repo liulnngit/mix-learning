@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dongnaoedu.servlet</groupId>
+	<artifactId>tony-servlet-container</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+		<!-- 各厂商或者开源软件都有对servlet规范的实现(weblogic,tomcat,undertow,jetty,jersey,glassfish) -->
+		<!-- 规范就好比是设计文档 -->
+		<!-- 所谓的实现就是把设计文档里面的东西，变成代码，变成现成的jar包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.tomcat</groupId> -->
+		<!-- <artifactId>tomcat-servlet-api</artifactId> -->
+		<!-- <version>7.0.30</version> -->
+		<!-- </dependency> -->
+	</dependencies>
+</project>

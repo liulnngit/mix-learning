@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title th:text="${goodsInfo.goods_title}">模板默认title</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="抖音，少女，连衣裙，小朋友，长发" />
+<script type="application/x-javascript">
+
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
+<!-- //for-mobile-apps -->
+<link href="http://p66gg5i0y.bkt.clouddn.com/mall/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="http://p66gg5i0y.bkt.clouddn.com/mall/css/flexslider.css" type="text/css"
+	media="screen" property="" />
+<!-- js -->
+<script src="http://p66gg5i0y.bkt.clouddn.com/mall/js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!-- font-awesome-icons -->
+<link href="http://p66gg5i0y.bkt.clouddn.com/mall/css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome-icons -->
+<link
+	href="http://p66gg5i0y.bkt.clouddn.com/mall/css/fonts.googleapis.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<h1 th:text="${goodsInfo.goods_title}">模板-默认title</h1>
+		<div class="w3_agile_main_grids">
+			<div class="w3layouts_main_grid_left">
+				<section class="slider">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="w3ls_main_grid_left_grid">
+									<img src=http://p66gg5i0y.bkt.clouddn.com/mall/images/30.jpg alt=" " />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+			<div class="w3_main_grid_right">
+				<div class="w3l_main_grid_right_grid">
+					<div class="wthree_main_grid_right_grid1">
+						<div class="agileits_nav">
+							<ul>
+								<li class="active"><a href="#">商品概述</a></li>
+								<li><a href="#">详细信息</a></li>
+								<li><a href="#">用户评论</a></li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="w3_agileits_main_grid_right_info">
+						<h2 th:text="${goodsInfo.goods_desc}"></h2>
+						<h3>商场打特价，立享特惠.</h3>
+						<p th:text="${goodsInfo.goods_comment}"></p>
+					</div>
+					
+					<div class="agile_price_social">
+						<div class="agile_price">
+							<h3 th:text="${goodsInfo.goods_price}">$159.00</h3>
+						</div>
+						<div class="w3_agile_social">
+							<ul>
+								<li><a href="#" class="fa fa-wechat icon wechat"> </a></li>
+								<li><a href="#" class="fa fa-qq icon qq"> </a></li>
+								<li><a href="#" class="fa fa-weibo icon weibo"></a></li>
+								<li><a href="#" class="fa fa-facebook icon facebook"></a></li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="w3_agileits_add_to_cart">
+						<div class="w3_cart">
+							<a href="#">添加到购物车<i class="fa fa-shopping-bag"
+								aria-hidden="true"></i></a>
+						</div>
+						<div class="w3l_wishlist">
+							<a href="#">收藏<i class="fa fa-heart-o" aria-hidden="true"></i></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="agileits_copyright">
+			<p>
+				© 2018 动脑学院. All rights reserved | Design by <a
+					href="//w3layouts.com/">Tony</a>
+			</p>
+		</div>
+	</div>
+	<!-- quality -->
+	<script>
+		$('.value-plus')
+				.on(
+						'click',
+						function() {
+							var divUpd = $(this).parent().find('.value'), newVal = parseInt(
+									divUpd.text(), 10) + 1;
+							divUpd.text(newVal);
+						});
+
+		$('.value-minus')
+				.on(
+						'click',
+						function() {
+							var divUpd = $(this).parent().find('.value'), newVal = parseInt(
+									divUpd.text(), 10) - 1;
+							if (newVal >= 1)
+								divUpd.text(newVal);
+						});
+	</script>
+	<!-- //quality -->
+	<!-- flexSlider -->
+	<script defer src="http://p66gg5i0y.bkt.clouddn.com/mall/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation : "slide",
+				start : function(slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- //flexSlider -->
+</body>
+</html>

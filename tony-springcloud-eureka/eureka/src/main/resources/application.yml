@@ -1,0 +1,23 @@
+# 上下文初始化加载
+info:
+  name: Eureka server
+  contact: 动脑科技VIP
+
+server:
+  port: 8761
+  
+eureka:
+  client:
+    # 是否注册到eurekaserver
+    registerWithEureka: false
+    # 是否拉取信息
+    fetchRegistry: false
+  # 更多配置参考类：org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean
+  server:
+    # 服务剔除任务执行周期,默认60*1000毫秒
+    evictionIntervalTimerInMs: 10000
+    # 设置为false代表关闭自我保护，不管如何都要剔除心跳检测异常的服务
+    enableSelfPreservation: true
+    # 自我保护模式开启的阈值
+    renewalPercentThreshold: 0.85
+    

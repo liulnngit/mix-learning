@@ -1,0 +1,13 @@
+server:
+  port: 80 
+
+spring: 
+  thymeleaf: 
+    mode: HTML 
+    prefix: classpath:/views/
+    suffix: .html
+  datasource:
+    url: jdbc:mysql://database.tony.com:3306/dn_mall?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: tony
+    password: tony
+    driver-class-name: com.mysql.jdbc.Driver
